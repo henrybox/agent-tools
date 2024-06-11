@@ -1,0 +1,44 @@
+{
+	"name": "your-package-name",
+	"version": "0.0.1",
+	"title": "Your package title",
+	"description": "",
+	"repository": "https://github.com/...",
+	"license": "MIT",
+	"scripts": {
+		"start": "node --enable-source-maps ../runners/empty.js"
+	},
+	"modules": {
+		"path": "modules"
+	},
+	"dependencies": {
+		"@beyond-js/kernel": "~0.1.9"
+	},
+	"devDependencies": {
+		"@beyond-js/local": "~0.1.3",
+		"@beyond-js/bee": "^0.0.6"
+	},
+	"deployment": {
+		"distributions": [
+			{
+				"name": "node",
+				"environment": "local",
+				"platform": "node",
+				"ports": {
+					"bundles": 8080
+				}
+			},
+			{
+				"name": "node-ts",
+				"environment": "local",
+				"platform": "node",
+				"ts": {
+					"compiler": "tsc"
+				},
+				"ports": {
+					"bundles": 8081
+				}
+			}
+		]
+	}
+}
