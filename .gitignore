@@ -1,4 +1,4 @@
+src/.env
 node_modules
+!src/modules/node_modules
 beyond
-/src/.env
-
